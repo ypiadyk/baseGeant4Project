@@ -1,0 +1,22 @@
+/run/verbose 1
+/event/verbose 0
+/tracking/verbose 0
+
+/vis/open HepRepFile
+
+/vis/drawVolume
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate 1000
+
+# show only e+ e-
+#/vis/filtering/trajectories/create/particleFilter
+#/vis/filtering/trajectories/particleFilter-0/add e+
+#/vis/filtering/trajectories/particleFilter-0/add e-
+#/vis/filtering/trajectories/particleFilter-0/invert true
+#/vis/filtering/trajectories/particleFilter-0/verbose true
+#/vis/filtering/trajectories/particleFilter-0/active false
+
+
+/gun/particle gamma
+#/gun/energy 3000 keV
+#/run/beamOn 10
